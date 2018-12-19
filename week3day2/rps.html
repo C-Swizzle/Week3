@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="user-text">...</h1>
+    <p>Win: <div id="win"></div> </p>
+    <p>Lose: <div id="loss"></div> </p>
+    <p>Tie: <div id="tie"></div></p>n
+
+    <script type="text/javascript">
+    var userText = document.getElementById("user-text");
+    var compArray = ['r', 'p', 's'];
+
+    var win= 0;
+    var tie=0;
+    var lose=0;
+    document.onkeyup = function(event) {
+        var press = event.key;
+        
+        var rand = Math.floor(Math.random() * compArray.length);
+        var computer = compArray[rand];
+        console.log(computer);
+        console.log(press);
+        
+        if (press===computer) {
+            tie++;
+        } else if (press === "s"  && computer=== "p"){
+            win++
+        } else if (press === "r"  && computer=== "s"){
+            win++
+        } else if (press === "p"  && computer=== "r"){
+            win++
+        } else {
+            lose++
+        }
+        var userTextWin = document.getElementById("win");
+        var userTextLose = document.getElementById("loss");
+        var userTextTie = document.getElementById("tie");
+
+        userTextWin.textContent = win;
+        userTextLose.textContent = lose;
+        userTextTie.textContent = tie;
+
+    console.log("Wins: " + win);
+    console.log("Loss: " + lose);
+    console.log("Ties: " + tie);
+    }
+    
+    </script>
+</body>
+</html>

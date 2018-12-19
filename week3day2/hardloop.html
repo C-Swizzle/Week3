@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    var myFarm = ["chickens", "pigs", "cows", "horses", "ostriches"];
+        //will log the elements of the array to the console.
+        for (var i=0; i<myFarm.length; i++) {
+        console.log(myFarm[i]);
+        
+        //will check the first character of each element in the array, if it's c or o then it will write/not write the following
+            if (myFarm[i].charAt(0)==="c" || myFarm[i].charAt(0)==="o") {
+            document.write("start with c or o<br>");
+            }   else {
+            document.write("nah<br>");
+            }
+        }
+    
+
+    </script>
+</body>
+</html>
